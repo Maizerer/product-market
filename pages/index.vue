@@ -2,6 +2,7 @@
   <div class="container">
     <div>
       <Logo />
+      <div class="bg-red-600 w-full h-52"></div>
       <h1 class="title">product-market</h1>
       <div class="links">
         <a
