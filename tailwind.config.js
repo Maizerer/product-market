@@ -11,5 +11,15 @@ module.exports = {
     './layouts/**/*.{vue}',
     './components/**/*.{vue}',
   ],
+  theme: {
+    colors: {
+      red: {
+        DEFAULT: '#FF0000',
+      },
+      yellow: {
+        DEFAULT: '#FFA900',
+      },
+    },
+  },
   plugins: [],
 }
