@@ -1,30 +1,90 @@
 <template>
-  <div class="xiy flex justify-center items-center gap-6">
-    <div class="uppercase">
-      Питайтесь разнообразно и копите
-      <span class="xiy-test rounded-[8px] text-red p-[3px] bg-yellow"
-        >скидку</span
+  <div>
+    <div
+      :style="{
+        'background-image': `url(${require('~/assets/images/offer-bg.jpg')})`,
+      }"
+      class="flex justify-center items-center gap-6 bg-cover bg-center bg-no-repeat text-white"
+    >
+      <div
+        class="uppercase py-[12px] text-[22px] font-nunito font-black max-w-[355px]"
       >
-      <span class="lowercase">до 10%</span>
+        Питайтесь разнообразно и копите
+        <span class="rounded-[8px] text-red p-[3px] bg-yellow">скидку</span>
+        <span class="lowercase">до 10%</span>
+      </div>
+      <button
+        class="px-[20px] py-[4px] border rounded-[30px] text-[20px] font-nunito font-semibold"
+      >
+        Получить скидку
+      </button>
     </div>
-    <button class="px-[20px] py-[4px] border rounded-[30px]">
-      Получить скидку
-    </button>
+
+    <div class="flex gap-[14px] container py-[30px]">
+      <div class="flex gap-[26px]">
+        <img src="~assets/images/svg/logo.svg" alt="" />
+        <div class="flex gap-2 bg-red text-white rounded-[31px] py-[13px] px-5">
+          <button class="font-extrabold">Каталог</button>
+        </div>
+        <div class="flex border border-borders rounded-2xl py-[13px] px-[15px]">
+          <input class="" type="text" placeholder="Начать поиск" />
+          <i-search size="22" color="search" class="ml-[69px]"></i-search>
+        </div>
+        <div class="flex rounded-2xl overflow-hidden text-white">
+          <div
+            class="flex flex-col items-center justify-center bg-yellow-70 py-[9px] pb-[2px] pr-[11px] pl-[19px]"
+          >
+            <i-geolocation size="14" color="white"></i-geolocation>
+            <span class="text-base leading-none font-nunito mt-[4px]">МСК</span>
+          </div>
+          <div class="bg-yellow pl-[15px] font-nunito">
+            <div class="text-sm pt-[6px]">Выберите способ получения</div>
+            <div class="text-base pr-[18px] font-bold">
+              Доставка или самовывоз
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-[14px]">
+        <button
+          class="px-[15px] py-3.5 border border-borders rounded-2xl hover:border-yellow duration-300"
+        >
+          <i-favorites size="22" color="borders"></i-favorites>
+        </button>
+        <button
+          class="px-4 py-3.5 border border-borders rounded-2xl hover:border-yellow duration-300"
+        >
+          <i-profile size="18" color="yellow"></i-profile>
+        </button>
+        <button
+          class="flex bg-red rounded-2xl gap-[13px] pr-[11px] py-[11px] pl-[17px]"
+        >
+          <i-backet size="24" color="white"></i-backet>
+          <span class="text-white text-base leading-none font-bold mx-0 my-auto"
+            >Корзина</span
+          >
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {}
+import IGeolocation from '~/components/icons/i-geolocation.vue'
+import IFavorites from '~/components/icons/i-favorites.vue'
+import IProfile from '~/components/icons/i-profile.vue'
+import IBacket from '~/components/icons/i-backet.vue'
+import ISearch from '~/components/icons/i-search.vue'
+export default {
+  name: 'HomePage',
+  components: {
+    IGeolocation,
+    IFavorites,
+    IProfile,
+    IBacket,
+    ISearch,
+  },
+}
 </script>
 
-<style lang="scss">
-body {
-  font-family: 'Nunito-Regular', 'serif';
-}
-.xiy {
-  background: #ccc;
-  &-test {
-    background: yellow;
-  }
-}
-</style>
+<style lang="scss"></style>
