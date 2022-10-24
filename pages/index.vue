@@ -26,9 +26,11 @@
         <div class="flex gap-2 bg-red text-white rounded-[31px] py-[13px] px-5">
           <button class="font-extrabold">Каталог</button>
         </div>
-        <div class="flex border border-borders rounded-2xl py-[13px] px-[15px]">
-          <input class="" type="text" placeholder="Начать поиск" />
-          <i-search size="22" color="search" class="ml-[69px]"></i-search>
+        <div
+          class="flex border border-borders rounded-2xl py-[13px] px-[15px] gap-4"
+        >
+          <input class="min-w-[240px]" type="text" placeholder="Начать поиск" />
+          <i-search size="22" color="search"></i-search>
         </div>
         <div class="flex rounded-2xl overflow-hidden text-white">
           <div
@@ -57,7 +59,7 @@
           <i-profile size="22"></i-profile>
         </button>
         <button
-          class="flex bg-red rounded-2xl gap-[13px] pr-[11px] py-[11px] pl-[17px]"
+          class="flex bg-red rounded-2xl gap-[13px] pr-[11px] py-[11px] pl-[17px] items-center"
         >
           <i-backet size="24" color="white"></i-backet>
           <span class="text-white text-base leading-none font-bold mx-0 my-auto"
@@ -68,37 +70,37 @@
     </div>
     <div class="flex gap-[14px] container font-semibold pt-[20px]">
       <div
-        class="flex gap-[6px] items-center bg-filterBtn hover:bg-hoverFilterBtn py-3.5 pl-3.5 pr-4 border border-yellow/40 rounded-2xl duration-300"
+        class="flex gap-[6px] items-center bg-filterBtn hover:bg-hoverFilterBtn py-3.5 pl-3.5 pr-4 border border-yellow/40 rounded-2xl duration-300 cursor-pointer"
       >
         <img src="~/assets/images/apple.png" alt="" />
         <div>Супермаркет</div>
       </div>
       <div
-        class="flex gap-[6px] items-center bg-filterBtn hover:bg-hoverFilterBtn py-3.5 pl-3.5 pr-4 border border-yellow/40 rounded-2xl duration-300"
+        class="flex gap-[6px] items-center bg-filterBtn hover:bg-hoverFilterBtn py-3.5 pl-3.5 pr-4 border border-yellow/40 rounded-2xl duration-300 cursor-pointer"
       >
         <img src="~/assets/images/pizza.png" alt="" />
         <div>Кулинария</div>
       </div>
       <div
-        class="flex gap-[6px] items-center bg-filterBtn hover:bg-hoverFilterBtn py-3.5 pl-3.5 pr-4 border border-yellow/40 rounded-2xl duration-300"
+        class="flex gap-[6px] items-center bg-filterBtn hover:bg-hoverFilterBtn py-3.5 pl-3.5 pr-4 border border-yellow/40 rounded-2xl duration-300 cursor-pointer"
       >
         <img src="~/assets/images/freezing.png" alt="" />
         <div>Заморозка</div>
       </div>
       <div
-        class="flex gap-[6px] items-center bg-filterBtn hover:bg-hoverFilterBtn py-3.5 pl-3.5 pr-4 border border-yellow/40 rounded-2xl duration-300"
+        class="flex gap-[6px] items-center bg-filterBtn hover:bg-hoverFilterBtn py-3.5 pl-3.5 pr-4 border border-yellow/40 rounded-2xl duration-300 cursor-pointer"
       >
         <img src="~/assets/images/other.png" alt="" />
         <div>Другое</div>
       </div>
       <div
-        class="flex gap-[6px] items-center bg-filterBtn hover:bg-hoverFilterBtn py-3.5 pl-3.5 pr-4 border border-yellow/40 rounded-2xl duration-300"
+        class="flex gap-[6px] items-center bg-filterBtn hover:bg-hoverFilterBtn py-3.5 pl-3.5 pr-4 border border-yellow/40 rounded-2xl duration-300 cursor-pointer"
       >
         <img src="~/assets/images/fire.png" alt="" />
         <div>Акции</div>
       </div>
       <div
-        class="flex gap-[6px] items-center bg-filterBtn hover:bg-hoverFilterBtn py-3.5 pl-3.5 pr-4 border border-yellow/40 rounded-2xl duration-300"
+        class="flex gap-[6px] items-center bg-filterBtn hover:bg-hoverFilterBtn py-3.5 pl-3.5 pr-4 border border-yellow/40 rounded-2xl duration-300 cursor-pointer"
       >
         <img src="~/assets/images/point.png" alt="" />
         <div>Магазины</div>
