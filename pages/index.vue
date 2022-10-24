@@ -27,24 +27,24 @@
           <button class="font-extrabold">Каталог</button>
         </div>
         <div
-          class="flex border border-borders rounded-2xl py-[13px] px-[15px] gap-4"
+          class="flex border border-borders rounded-2xl py-[13px] px-[15px] gap-4 items-center"
         >
           <input class="min-w-[240px]" type="text" placeholder="Начать поиск" />
           <i-search size="22" color="search"></i-search>
         </div>
         <div class="flex rounded-2xl overflow-hidden text-white">
-          <div
-            class="flex flex-col items-center justify-center bg-yellow-70 py-[9px] pb-[2px] pr-[11px] pl-[19px]"
+          <btn
+            class="flex flex-col items-center justify-center bg-yellow-70 py-[9px] pb-[2px] pr-[11px] pl-[19px] cursor-pointer"
           >
             <i-geolocation size="14" color="white"></i-geolocation>
             <span class="text-base leading-none font-nunito mt-[4px]">МСК</span>
-          </div>
-          <div class="bg-yellow pl-[15px] font-nunito">
+          </btn>
+          <btn class="bg-yellow pl-[15px] font-nunito cursor-pointer">
             <div class="text-sm pt-[6px]">Выберите способ получения</div>
             <div class="text-base pr-[18px] font-bold">
               Доставка или самовывоз
             </div>
-          </div>
+          </btn>
         </div>
       </div>
       <div class="flex gap-[14px]">
