@@ -11,5 +11,47 @@ module.exports = {
     './layouts/**/*.{vue}',
     './components/**/*.{vue}',
   ],
+  theme: {
+    screen: {
+      sm: '640px',
+      md: '760px',
+      lg: '997px',
+      xl: '1290px',
+      xxl: '1536px',
+    },
+    container: {
+      center: true,
+    },
+    colors: {
+      current: 'currentColor',
+      white: '#FFFFFF',
+      black: '#000000',
+      red: {
+        DEFAULT: '#FF0000',
+      },
+      yellow: {
+        DEFAULT: '#FFA900',
+        70: 'rgba(255, 169, 0, .7)',
+      },
+      green: {
+        DEFAULT: '#0E6A63',
+        50: 'rgba(14, 106, 99, .5)',
+        light: '#E7EFEE',
+      },
+      textlight: '#6B6B6B',
+      borders: '#E1E1E1',
+      search: '#6B6B6B',
+      filterBtn: '#FFF8EB',
+      hoverFilterBtn: '#FFF8BC',
+    },
+    extends: {
+      backgroundImage: {
+        'offer-bg': "url('~assets/images/offer-bg.jpg')",
+      },
+    },
+    fontFamily: {
+      nunito: 'Nunito, sans-serif',
+    },
+  },
   plugins: [],
 }
