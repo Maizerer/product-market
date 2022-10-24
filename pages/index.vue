@@ -68,6 +68,7 @@
         </button>
       </div>
     </div>
+
     <div class="flex gap-[14px] container font-semibold pt-[20px]">
       <div
         class="flex gap-[6px] items-center bg-filterBtn hover:bg-hoverFilterBtn py-3.5 pl-3.5 pr-4 border border-yellow/40 rounded-2xl duration-300 cursor-pointer"
@@ -104,6 +105,197 @@
       >
         <img src="~/assets/images/point.png" alt="" />
         <div>Магазины</div>
+      </div>
+    </div>
+
+    <div class="pt-28 flex container justify-between items-center">
+      <div class="flex gap-7 items-center">
+        <div class="uppercase font-bold text-[32px]">Скидки</div>
+        <btn
+          class="flex py-[10px] px-[22px] gap-4 text-categoryBtn hover:text-white hover:bg-yellow duration-300 bg-filterBtn border border-categoryBorder rounded-2xl cursor-pointer"
+        >
+          <div class="text-[22px]">Смотреть всё</div>
+          <img src="~/assets/images/svg/right-arrow.svg" alt="" />
+        </btn>
+      </div>
+      <div
+        class="flex gap-2 bg-filterBtn border border-categoryBorder p-2 rounded-[58px]"
+      >
+        <btn class="hover:bg-yellow px-2 py-2 rounded-full cursor-pointer">
+          <img src="~/assets/images/left-arrow.png" alt="" />
+        </btn>
+        <btn class="hover:bg-yellow px-2 py-2 rounded-full cursor-pointer">
+          <img src="~/assets/images/right-arrow.png" alt="" />
+        </btn>
+      </div>
+    </div>
+    <div class="flex gap-6 container pt-9">
+      <div
+        class="flex flex-col max-w-[304px] border border-borders rounded-[20px]"
+      >
+        <div>
+          <img src="~/assets/images/BionolaMusli.jpg" alt="" />
+        </div>
+        <div class="px-4 pb-5">
+          <div class="flex justify-between text-sm leading-none text-price">
+            <div>В наличии 2 шт</div>
+            <div>99,90 грн</div>
+          </div>
+          <div class="font-semibold text-xl leading-none my-[7px] h-[82px]">
+            Гранола Мюсли Bionova ягодные запечённые хрустящие, 400г
+          </div>
+          <div class="flex justify-between items-center">
+            <div>
+              <div class="text-red text-2xl leading-none font-semibold">
+                99,90 грн
+              </div>
+              <div class="text-price line-through text-sm">129,00 грн</div>
+            </div>
+            <div
+              class="text-red py-2.5 px-4 border border-red rounded-[60px] cursor-pointer hover:bg-red hover:text-white duration-300"
+            >
+              В корзину
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col max-w-[304px] border border-borders rounded-[20px]"
+      >
+        <div>
+          <img src="~/assets/images/oranjeJuice.png" alt="" />
+        </div>
+        <div class="px-4 pb-5">
+          <div class="flex justify-between text-sm leading-none text-price">
+            <div>В наличии 33 шт</div>
+            <div>70,90 грн</div>
+          </div>
+          <div class="font-semibold text-xl leading-none my-[7px] h-[82px]">
+            Сок Ideas тыквенно-апельсиновый, 1л
+          </div>
+          <div class="flex justify-between">
+            <div>
+              <div class="text-2xl leading-none font-semibold">70,90 грн</div>
+            </div>
+            <div
+              class="text-red py-2.5 px-4 border border-red rounded-[60px] cursor-pointer hover:bg-red hover:text-white duration-300"
+            >
+              В корзину
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col max-w-[304px] border border-borders rounded-[20px]"
+      >
+        <div>
+          <img src="~/assets/images/BionolaMusli.jpg" alt="" />
+        </div>
+        <div class="px-4 pb-5">
+          <div class="flex justify-between text-sm leading-none text-price">
+            <div style="color: #bf7373">Появится завтра</div>
+            <div>99,90 грн</div>
+          </div>
+          <div class="font-semibold text-xl leading-none my-[7px] h-[82px]">
+            Гранола Мюсли Bionova ягодные запечённые хрустящие, 400г
+          </div>
+          <div class="flex justify-between items-center">
+            <div>
+              <div class="text-red text-2xl leading-none font-semibold">
+                99,90 грн
+              </div>
+              <div class="text-price line-through text-sm">129,00 грн</div>
+            </div>
+            <div
+              class="text-red py-2.5 px-4 border border-red rounded-[60px] cursor-pointer hover:bg-red hover:text-white duration-300"
+            >
+              На завтра
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col max-w-[304px] border border-borders rounded-[20px]"
+      >
+        <div>
+          <img src="~/assets/images/oranjeJuice.png" alt="" />
+        </div>
+        <div class="px-4 pb-5">
+          <div class="flex justify-between text-sm leading-none text-price">
+            <div>В наличии 3 шт</div>
+            <div>70,90 грн</div>
+          </div>
+          <div class="font-semibold text-xl leading-none my-[7px] h-[82px]">
+            Сок Ideas тыквенно-апельсиновый, 1л
+          </div>
+          <div class="flex justify-between">
+            <div>
+              <div class="text-2xl leading-none font-semibold">70,90 грн</div>
+            </div>
+            <div
+              class="flex bg-filterBtn border border-categoryBorder font-bold gap-2 text-yellow p-1.5 rounded-[58px]"
+            >
+              <div
+                class="flex- justify-center hover:bg-yellow hover:text-white hover:rounded-full px-2"
+              >
+                <div class="rounded-full">-</div>
+              </div>
+              <div>1</div>
+              <div
+                class="flex justify-center hover:bg-yellow hover:text-white hover:rounded-full px-2"
+              >
+                <div>+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-[200px] container">
+      <div class="flex gap-7 items-center">
+        <div class="uppercase font-bold text-[32px]">Супермаркет</div>
+        <btn
+          class="flex py-[10px] px-[22px] gap-4 text-categoryBtn hover:text-white hover:bg-yellow duration-300 bg-filterBtn border border-categoryBorder rounded-2xl cursor-pointer"
+        >
+          <div class="text-[22px]">Смотреть всё</div>
+          <img src="~/assets/images/svg/right-arrow.svg" alt="" />
+        </btn>
+      </div>
+    </div>
+    <div class="flex container gap-6 pt-11">
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/drinks.png')})`,
+        }"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">
+          Вода <br />
+          и напитки
+        </div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/milks.png')})`,
+        }"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">
+          Молоко, масло <br />
+          и яйца
+        </div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/snacks.png')})`,
+        }"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">
+          Снэки <br />
+          и сухофрукты
+        </div>
       </div>
     </div>
   </div>
