@@ -41,6 +41,8 @@ module.exports = {
       textlight: '#6B6B6B',
       borders: '#E1E1E1',
       search: '#6B6B6B',
+      filterBtn: '#FFF8EB',
+      hoverFilterBtn: '#FFF8BC',
     },
     extends: {
       backgroundImage: {

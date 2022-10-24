@@ -24,7 +24,7 @@ export default {
     },
     color: {
       type: String,
-      required: true,
+      default: 'currentColor',
     },
   },
   computed: {
