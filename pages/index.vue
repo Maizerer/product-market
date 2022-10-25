@@ -79,7 +79,7 @@
       <div
         class="flex gap-[6px] items-center bg-filterBtn hover:bg-hoverFilterBtn py-3.5 pl-3.5 pr-4 border border-yellow/40 rounded-2xl duration-300 cursor-pointer"
       >
-        <img src="~/assets/images/pizza.png" alt="" />
+        <img src="~/assets/images/categoryPizza.png" alt="" />
         <div>Кулинария</div>
       </div>
       <div
@@ -268,7 +268,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/drinks.png')})`,
         }"
-        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border rounded-[58px]"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
       >
         <div class="text-3xl text-supermarket">
           Вода <br />
@@ -279,7 +279,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/milks.png')})`,
         }"
-        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border rounded-[58px]"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
       >
         <div class="text-3xl text-supermarket">
           Молоко, масло <br />
@@ -290,11 +290,389 @@
         :style="{
           'background-image': `url(${require('~/assets/images/snacks.png')})`,
         }"
-        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border rounded-[58px]"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
       >
         <div class="text-3xl text-supermarket">
           Снэки <br />
           и сухофрукты
+        </div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/coffee.png')})`,
+        }"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">Кофе, чай <br />и сладости</div>
+      </div>
+    </div>
+    <div class="flex container gap-6 pt-5">
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/cereals.png')})`,
+        }"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">
+          Макароны <br />
+          и крупы
+        </div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/bread.png')})`,
+        }"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">
+          Хлеб <br />
+          и выпечка
+        </div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/sausage.png')})`,
+        }"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">
+          Масло, соусы <br />
+          и специи
+        </div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/pickles.png')})`,
+        }"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">Консервы <br />и соления</div>
+      </div>
+    </div>
+    <div class="pt-[200px] container">
+      <div class="flex gap-7 items-center">
+        <div class="uppercase font-bold text-[32px]">Кулинария</div>
+        <btn
+          class="flex py-[10px] px-[22px] gap-4 text-categoryBtn hover:text-white hover:bg-yellow duration-300 bg-filterBtn border border-categoryBorder rounded-2xl cursor-pointer"
+        >
+          <div class="text-[22px]">Смотреть всё</div>
+          <img src="~/assets/images/svg/right-arrow.svg" alt="" />
+        </btn>
+      </div>
+    </div>
+    <div class="flex container gap-6 pt-11">
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/bakery.png')})`,
+        }"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">Выпечка</div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/pizza.png')})`,
+        }"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">Пиццы</div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/grill-menu.png')})`,
+        }"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">Гриль-меню</div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/meat.png')})`,
+        }"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">Свежее мясо</div>
+      </div>
+    </div>
+    <div class="flex container gap-6 pt-11">
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/salat.png')})`,
+        }"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">Салаты</div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/soups.png')})`,
+        }"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">Супы</div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/hot.png')})`,
+        }"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">Горячие блюда</div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/deserts.png')})`,
+        }"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">Десерты</div>
+      </div>
+    </div>
+    <div class="pt-[200px] container">
+      <div class="flex gap-7 items-center">
+        <div class="uppercase font-bold text-[32px]">Заморозка</div>
+        <btn
+          class="flex py-[10px] px-[22px] gap-4 text-categoryBtn hover:text-white hover:bg-yellow duration-300 bg-filterBtn border border-categoryBorder rounded-2xl cursor-pointer"
+        >
+          <div class="text-[22px]">Смотреть всё</div>
+          <img src="~/assets/images/svg/right-arrow.svg" alt="" />
+        </btn>
+      </div>
+    </div>
+    <div class="flex container gap-6 pt-11">
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/pelmeni.png')})`,
+        }"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">
+          Пельмени, вареники <br />
+          и равиоли
+        </div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/hinkali.png')})`,
+        }"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">
+          Хинкали <br />
+          и манты
+        </div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/half-fabrics.png')})`,
+        }"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">
+          Полу- <br />
+          фабрикаты
+        </div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/freeze-veg.png')})`,
+        }"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">
+          Замороженные <br />
+          овощи
+        </div>
+      </div>
+    </div>
+    <div class="flex container gap-6 pt-11">
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/fish.png')})`,
+        }"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">
+          Рыба и <br />
+          морепродукты
+        </div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/fishMeat.png')})`,
+        }"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">Мясо</div>
+      </div>
+    </div>
+    <div class="pt-[200px] container">
+      <div class="flex gap-7 items-center">
+        <div class="uppercase font-bold text-[32px]">Другое</div>
+        <btn
+          class="flex py-[10px] px-[22px] gap-4 text-categoryBtn hover:text-white hover:bg-yellow duration-300 bg-filterBtn border border-categoryBorder rounded-2xl cursor-pointer"
+        >
+          <div class="text-[22px]">Смотреть всё</div>
+          <img src="~/assets/images/svg/right-arrow.svg" alt="" />
+        </btn>
+      </div>
+    </div>
+    <div class="flex container gap-6 pt-11">
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/beauty.png')})`,
+        }"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">
+          Красота <br />
+          и гигиена
+        </div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/washes.png')})`,
+        }"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">
+          Стирка <br />
+          и уборка
+        </div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/usefulTrifle.png')})`,
+        }"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">
+          Полезные <br />
+          мелочи
+        </div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/appliances.png')})`,
+        }"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+      >
+        <div class="text-3xl text-supermarket">
+          Бытовая <br />
+          техника
+        </div>
+      </div>
+    </div>
+    <div class="pt-[200px] flex container justify-between items-center">
+      <div class="flex gap-7 items-center">
+        <div class="uppercase font-bold text-[32px]">Акции</div>
+        <btn
+          class="flex py-[10px] px-[22px] gap-4 text-categoryBtn hover:text-white hover:bg-yellow duration-300 bg-filterBtn border border-categoryBorder rounded-2xl cursor-pointer"
+        >
+          <div class="text-[22px]">Смотреть всё</div>
+          <img src="~/assets/images/svg/right-arrow.svg" alt="" />
+        </btn>
+      </div>
+      <div
+        class="flex gap-2 bg-filterBtn border border-categoryBorder p-2 rounded-[58px]"
+      >
+        <btn class="hover:bg-yellow px-2 py-2 rounded-full cursor-pointer">
+          <img src="~/assets/images/left-arrow.png" alt="" />
+        </btn>
+        <btn class="hover:bg-yellow px-2 py-2 rounded-full cursor-pointer">
+          <img src="~/assets/images/right-arrow.png" alt="" />
+        </btn>
+      </div>
+    </div>
+    <div class="flex container gap-6 pt-11">
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/preorder.png')})`,
+        }"
+        class="bg-cover bg-center bg-no-repeat w-[310px] h-[449px] pt-9 px-9 border border-borders rounded-[30px]"
+      >
+        <div class="text-2xl font-bold text-supermarket">
+          Сделай предзаказ в кулинарии <br />
+          со скидкой
+        </div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/celeb.png')})`,
+        }"
+        class="bg-cover bg-center bg-no-repeat w-[310px] h-[449px] pt-9 px-9 border border-borders rounded-[30px]"
+      >
+        <div class="text-2xl font-bold text-supermarket">
+          Праздник <br />
+          к нам приходит
+        </div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/saleFor3.png')})`,
+        }"
+        class="bg-cover bg-center bg-no-repeat w-[310px] h-[449px] pt-9 px-9 border border-borders rounded-[30px]"
+      >
+        <div class="text-2xl font-bold text-supermarket">
+          Скидка на третий товар в корзине "Чистая линия"
+        </div>
+      </div>
+      <div
+        :style="{
+          'background-image': `url(${require('~/assets/images/combo.png')})`,
+        }"
+        class="bg-cover bg-center bg-no-repeat w-[310px] h-[449px] pt-9 px-9 border border-borders rounded-[30px]"
+      >
+        <div class="text-2xl font-bold text-supermarket">
+          Комбо-набор <br />
+          3 пиццы за 1500 Р
+        </div>
+      </div>
+    </div>
+    <div class="pt-[200px] container">
+      <div class="flex gap-7 items-center">
+        <div class="uppercase font-bold text-[32px]">Доставка и оплата</div>
+      </div>
+    </div>
+    <div class="flex container gap-7 pt-12 text-xl">
+      <div>
+        <div>
+          <div class="text-red font-bold">Зона доставки</div>
+          <div class="pt-1.5">
+            Доставка осуществляется в районе ЖК «Ильинские Луга» (Харьковськая
+            обл., Красногорск, пос. Ильинское-Усово, ул. Заповедная) и ЖК «Новая
+            Рига» (Харьковськая обл., Красногорск, д. Глухово, ул. Рублевское
+            Предместье)
+          </div>
+        </div>
+        <div>
+          <div class="pt-8 text-red font-bold">25 минут</div>
+          <div class="pt-1.5">
+            Доставка 25 минут. Принимаем заказы с 7:00 до 23:00
+          </div>
+        </div>
+        <div>
+          <div class="pt-8 text-red font-bold">300 грн</div>
+          <div class="pt-1.5">
+            Минимальная сумма бесплатной доставки с учетом скидок. Иначе
+            стоимость доставке 50 грн
+          </div>
+        </div>
+        <div>
+          <div class="text-red font-bold pt-6">Оплата</div>
+          <div class="pt-1.5">
+            При оформлении заказа вы можете выбрать удобный для вас спобос
+            рассчета
+          </div>
+        </div>
+        <div class="pt-8">
+          Изображение продуктов могут отличаться от продуктов в заказе.
+        </div>
+      </div>
+      <div>
+        <div class="text-red font-bold">Карта доставки</div>
+        <div class="w-[633px] h-[480px] pt-5">
+          <img class="w-full" src="~/assets/images/deliveryMap.png" alt="" />
         </div>
       </div>
     </div>
