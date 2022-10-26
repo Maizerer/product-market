@@ -676,6 +676,127 @@
         </div>
       </div>
     </div>
+    <div
+      :style="{
+        'background-image': `url(${require('~/assets/images/promocode-bg.png')})`,
+      }"
+      class="flex items-start bg-contain bg-center bg-no-repeat container gap-[100px] pb-10 pl-16 pt-10 text-white mt-[90px]"
+      style="margin-top: 94px"
+    >
+      <div class="flex gap-[15px] font-bold text-[38px]">
+        <div>
+          <div>БЕСПЛАТНАЯ ДОСТАВКА</div>
+          <div class="text-[22px]">первого заказа</div>
+        </div>
+        <div>+</div>
+        <div>
+          <div>Скидка 10%</div>
+          <div class="text-[22px]">на заказы клинарии</div>
+        </div>
+      </div>
+      <btn
+        class="font-semibold text-[22px] px-7 py-3 border border-white rounded-[30px] cursor-pointer"
+      >
+        Получить промокод
+      </btn>
+    </div>
+    <div
+      :style="{
+        'background-image': `url(${require('~/assets/images/markShop.png')})`,
+      }"
+      class="flex bg-cover bg-no-repeat bg-center container gap-[150px] pl-16 py-7 overflow-visible"
+      style="margin-top: 98px"
+    >
+      <div>
+        <div class="uppercase text-[38px] font-bold">оцените магазин</div>
+        <div class="text-[20px] max-w-[353px]">
+          Поделитесь впечатлением о заказе и помогите сделать нас лучше
+        </div>
+      </div>
+      <div class="flex flex-col gap-[15px]">
+        <div><img src="~/assets/images/stars.png" alt="" /></div>
+        <btn
+          class="text-red text-[22px] font-semibold py-3.5 px-9 border border-red rounded-[30px] cursor-pointer"
+        >
+          Оставить отзыв
+        </btn>
+      </div>
+    </div>
+    <div class="bg-red mt-24">
+      <div class="flex items-center container text-white text-sm pt-9 pb-5">
+        <div>
+          <div class="flex gap-16">
+            <div class="flex flex-col gap-1 cursor-pointer">
+              <div class="font-bold">Ильинский онлайн</div>
+              <a>Кулинария</a>
+              <a>Супермаркет</a>
+              <a>Заморозка</a>
+              <a>Другое</a>
+            </div>
+            <div class="flex flex-col gap-1 cursor-pointer">
+              <div class="font-bold">Ильинский клуб</div>
+              <a>Акции</a>
+              <a>Доставка и оплата</a>
+              <a>Программа лояльности</a>
+              <a>Политика конфиденциальности</a>
+              <a>Вакансии</a>
+            </div>
+          </div>
+          <div class="text-xs mt-20">
+            © 2022 Ильинский онлайн — доставка товаров и продуктов на дом
+          </div>
+        </div>
+        <div class="ml-[100px]">
+          <div class="flex flex-col gap-2">
+            <div class="flex gap-2.5">
+              <div><img src="~/assets/images/svg/phone.svg" alt="" /></div>
+              <div>
+                <div class="text-xl font-semibold">+38 (000) 49-09-99</div>
+                <div class="text-white/40">Ежедневно c 09:00 до 21:00</div>
+              </div>
+            </div>
+            <div class="flex gap-5 mt-3.5">
+              <div><img src="~/assets/images/svg/compass.svg" alt="" /></div>
+              <div class="font-semibold">Адреса магазинов</div>
+            </div>
+            <div class="flex gap-5">
+              <div><img src="~/assets/images/svg/follow.svg" alt="" /></div>
+              <div>Следите за нами</div>
+            </div>
+            <div class="flex gap-5">
+              <div><img src="~/assets/images/svg/mail.svg" alt="" /></div>
+              <div>Обратная связь</div>
+            </div>
+          </div>
+          <div class="text-xs mt-20">
+            Информация на сайте не является публичной офертой
+          </div>
+        </div>
+        <div class="flex flex-col gap-2.5 text-lg font-semibold ml-[63px]">
+          <div class="">Подпишитесь на вкусные и полезые новости</div>
+          <div class="flex items-center gap-3 max-w-[406px]">
+            <input
+              class="min-w-[250px] min-h-[45px] rounded-2xl pl-1.5 pr-1.5 text-black"
+              type="text"
+            />
+            <btn
+              class="py-2.5 px-[13px] border border-white rounded-2xl cursor-pointer"
+              >Подписаться</btn
+            >
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="~/assets/images/svg/circle.svg" alt="" />
+            <div class="text-white/50 text-sm">
+              Согласен с политикой конфиденциальности
+            </div>
+          </div>
+          <div class="flex gap-4 mt-[85px]">
+            <img src="~/assets/images/svg/banks.svg" alt="" />
+            <img src="~/assets/images/svg/developed.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
