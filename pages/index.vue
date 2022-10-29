@@ -108,6 +108,21 @@
       </div>
     </div>
 
+    <div class="flex container">
+      <div>
+        <swiper
+          :slides-per-view="1"
+          :modules="modules"
+          :pagination="{ clickable: true }"
+        >
+          <swiper-slide>Slide 1</swiper-slide>
+          <swiper-slide>Slide 2</swiper-slide>
+          <swiper-slide>Slide 3</swiper-slide>
+        </swiper>
+      </div>
+      <div></div>
+    </div>
+
     <div class="pt-28 flex container justify-between items-center">
       <div class="flex gap-7 items-center">
         <div class="uppercase font-bold text-[32px]">Скидки</div>
@@ -801,6 +816,10 @@
 </template>
 
 <script>
+import SwiperClass, { Pagination } from 'swiper'
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+import 'swiper/css'
+import 'swiper/css/pagination'
 import IGeolocation from '~/components/icons/i-geolocation.vue'
 import IFavorites from '~/components/icons/i-favorites.vue'
 import IProfile from '~/components/icons/i-profile.vue'
@@ -809,11 +828,18 @@ import ISearch from '~/components/icons/i-search.vue'
 export default {
   name: 'HomePage',
   components: {
+    Swiper,
+    SwiperSlide,
     IGeolocation,
     IFavorites,
     IProfile,
     IBacket,
     ISearch,
+  },
+  setup() {
+    return {
+      modules: [Pagination],
+    }
   },
 }
 </script>
