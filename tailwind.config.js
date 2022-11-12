@@ -49,6 +49,7 @@ module.exports = {
       productBorder: '#DADADA',
       supermarket: '#383C5C',
       supermargetBg: '#F7FFE5',
+      freezeBg: '#D9D9D9',
     },
     extends: {
       backgroundImage: {

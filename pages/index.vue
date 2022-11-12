@@ -33,18 +33,18 @@
           <i-search size="22" color="search"></i-search>
         </div>
         <div class="flex rounded-2xl overflow-hidden text-white">
-          <btn
+          <button
             class="flex flex-col items-center justify-center bg-yellow-70 py-[9px] pb-[2px] pr-[11px] pl-[19px] cursor-pointer"
           >
             <i-geolocation size="14" color="white"></i-geolocation>
             <span class="text-base leading-none font-nunito mt-[4px]">МСК</span>
-          </btn>
-          <btn class="bg-yellow pl-[15px] font-nunito cursor-pointer">
+          </button>
+          <button class="bg-yellow pl-[15px] font-nunito cursor-pointer">
             <div class="text-sm pt-[6px]">Выберите способ получения</div>
             <div class="text-base pr-[18px] font-bold">
               Доставка или самовывоз
             </div>
-          </btn>
+          </button>
         </div>
       </div>
       <div class="flex gap-[14px]">
@@ -109,39 +109,33 @@
     </div>
 
     <div class="flex container">
-      <div>
-        <swiper
-          :slides-per-view="1"
-          :modules="modules"
-          :pagination="{ clickable: true }"
-        >
-          <swiper-slide>Slide 1</swiper-slide>
-          <swiper-slide>Slide 2</swiper-slide>
-          <swiper-slide>Slide 3</swiper-slide>
-        </swiper>
-      </div>
+      <div></div>
       <div></div>
     </div>
 
     <div class="pt-28 flex container justify-between items-center">
       <div class="flex gap-7 items-center">
         <div class="uppercase font-bold text-[32px]">Скидки</div>
-        <btn
-          class="flex py-[10px] px-[22px] gap-4 text-categoryBtn hover:text-white hover:bg-yellow duration-300 bg-filterBtn border border-categoryBorder rounded-2xl cursor-pointer"
+        <button
+          class="flex items-center py-[10px] font-medium px-[22px] gap-4 text-categoryBtn hover:text-white hover:bg-yellow duration-300 bg-filterBtn border border-categoryBorder rounded-2xl cursor-pointer"
         >
           <div class="text-[22px]">Смотреть всё</div>
-          <img src="~/assets/images/svg/right-arrow.svg" alt="" />
-        </btn>
+          <i-arrow-right size="11"></i-arrow-right>
+        </button>
       </div>
       <div
         class="flex gap-2 bg-filterBtn border border-categoryBorder p-2 rounded-[58px]"
       >
-        <btn class="hover:bg-yellow px-2 py-2 rounded-full cursor-pointer">
-          <img src="~/assets/images/left-arrow.png" alt="" />
-        </btn>
-        <btn class="hover:bg-yellow px-2 py-2 rounded-full cursor-pointer">
-          <img src="~/assets/images/right-arrow.png" alt="" />
-        </btn>
+        <button class="hover:bg-yellow rounded-full cursor-pointer">
+          <div class="px-2 py-2 text-yellow hover:text-white">
+            <i-arrow-left size="11"></i-arrow-left>
+          </div>
+        </button>
+        <button class="hover:bg-yellow rounded-full cursor-pointer">
+          <div class="px-2 py-2 text-yellow hover:text-white">
+            <i-arrow-right size="11"></i-arrow-right>
+          </div>
+        </button>
       </div>
     </div>
     <div class="flex gap-6 container pt-9">
@@ -251,13 +245,13 @@
               class="flex bg-filterBtn border border-categoryBorder font-bold gap-2 text-yellow p-1.5 rounded-[58px]"
             >
               <div
-                class="flex- justify-center hover:bg-yellow hover:text-white hover:rounded-full px-2"
+                class="flex justify-center hover:bg-yellow hover:text-white hover:rounded-full px-2 cursor-pointer"
               >
                 <div class="rounded-full">-</div>
               </div>
               <div>1</div>
               <div
-                class="flex justify-center hover:bg-yellow hover:text-white hover:rounded-full px-2"
+                class="flex justify-center hover:bg-yellow hover:text-white hover:rounded-full px-2 cursor-pointer"
               >
                 <div>+</div>
               </div>
@@ -270,12 +264,12 @@
     <div class="pt-[200px] container">
       <div class="flex gap-7 items-center">
         <div class="uppercase font-bold text-[32px]">Супермаркет</div>
-        <btn
-          class="flex py-[10px] px-[22px] gap-4 text-categoryBtn hover:text-white hover:bg-yellow duration-300 bg-filterBtn border border-categoryBorder rounded-2xl cursor-pointer"
+        <button
+          class="flex items-center py-[10px] font-medium px-[22px] gap-4 text-categoryBtn hover:text-white hover:bg-yellow duration-300 bg-filterBtn border border-categoryBorder rounded-2xl cursor-pointer"
         >
           <div class="text-[22px]">Смотреть всё</div>
-          <img src="~/assets/images/svg/right-arrow.svg" alt="" />
-        </btn>
+          <i-arrow-right size="11"></i-arrow-right>
+        </button>
       </div>
     </div>
     <div class="flex container gap-6 pt-11">
@@ -283,7 +277,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/drinks.png')})`,
         }"
-        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">
           Вода <br />
@@ -294,7 +288,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/milks.png')})`,
         }"
-        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">
           Молоко, масло <br />
@@ -305,7 +299,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/snacks.png')})`,
         }"
-        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">
           Снэки <br />
@@ -316,7 +310,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/coffee.png')})`,
         }"
-        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">Кофе, чай <br />и сладости</div>
       </div>
@@ -326,7 +320,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/cereals.png')})`,
         }"
-        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">
           Макароны <br />
@@ -337,7 +331,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/bread.png')})`,
         }"
-        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">
           Хлеб <br />
@@ -348,7 +342,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/sausage.png')})`,
         }"
-        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">
           Масло, соусы <br />
@@ -359,7 +353,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/pickles.png')})`,
         }"
-        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">Консервы <br />и соления</div>
       </div>
@@ -367,12 +361,12 @@
     <div class="pt-[200px] container">
       <div class="flex gap-7 items-center">
         <div class="uppercase font-bold text-[32px]">Кулинария</div>
-        <btn
-          class="flex py-[10px] px-[22px] gap-4 text-categoryBtn hover:text-white hover:bg-yellow duration-300 bg-filterBtn border border-categoryBorder rounded-2xl cursor-pointer"
+        <button
+          class="flex items-center py-[10px] font-medium px-[22px] gap-4 text-categoryBtn hover:text-white hover:bg-yellow duration-300 bg-filterBtn border border-categoryBorder rounded-2xl cursor-pointer"
         >
           <div class="text-[22px]">Смотреть всё</div>
-          <img src="~/assets/images/svg/right-arrow.svg" alt="" />
-        </btn>
+          <i-arrow-right size="11"></i-arrow-right>
+        </button>
       </div>
     </div>
     <div class="flex container gap-6 pt-11">
@@ -380,7 +374,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/bakery.png')})`,
         }"
-        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">Выпечка</div>
       </div>
@@ -388,7 +382,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/pizza.png')})`,
         }"
-        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">Пиццы</div>
       </div>
@@ -396,7 +390,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/grill-menu.png')})`,
         }"
-        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">Гриль-меню</div>
       </div>
@@ -404,7 +398,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/meat.png')})`,
         }"
-        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">Свежее мясо</div>
       </div>
@@ -414,7 +408,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/salat.png')})`,
         }"
-        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">Салаты</div>
       </div>
@@ -422,7 +416,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/soups.png')})`,
         }"
-        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">Супы</div>
       </div>
@@ -430,7 +424,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/hot.png')})`,
         }"
-        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">Горячие блюда</div>
       </div>
@@ -438,7 +432,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/deserts.png')})`,
         }"
-        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">Десерты</div>
       </div>
@@ -446,12 +440,12 @@
     <div class="pt-[200px] container">
       <div class="flex gap-7 items-center">
         <div class="uppercase font-bold text-[32px]">Заморозка</div>
-        <btn
-          class="flex py-[10px] px-[22px] gap-4 text-categoryBtn hover:text-white hover:bg-yellow duration-300 bg-filterBtn border border-categoryBorder rounded-2xl cursor-pointer"
+        <button
+          class="flex items-center py-[10px] font-medium px-[22px] gap-4 text-categoryBtn hover:text-white hover:bg-yellow duration-300 bg-filterBtn border border-categoryBorder rounded-2xl cursor-pointer"
         >
           <div class="text-[22px]">Смотреть всё</div>
-          <img src="~/assets/images/svg/right-arrow.svg" alt="" />
-        </btn>
+          <i-arrow-right size="11"></i-arrow-right>
+        </button>
       </div>
     </div>
     <div class="flex container gap-6 pt-11">
@@ -459,7 +453,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/pelmeni.png')})`,
         }"
-        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">
           Пельмени, вареники <br />
@@ -470,7 +464,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/hinkali.png')})`,
         }"
-        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">
           Хинкали <br />
@@ -481,7 +475,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/half-fabrics.png')})`,
         }"
-        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">
           Полу- <br />
@@ -492,7 +486,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/freeze-veg.png')})`,
         }"
-        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">
           Замороженные <br />
@@ -505,7 +499,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/fish.png')})`,
         }"
-        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">
           Рыба и <br />
@@ -516,7 +510,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/fishMeat.png')})`,
         }"
-        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">Мясо</div>
       </div>
@@ -524,12 +518,12 @@
     <div class="pt-[200px] container">
       <div class="flex gap-7 items-center">
         <div class="uppercase font-bold text-[32px]">Другое</div>
-        <btn
-          class="flex py-[10px] px-[22px] gap-4 text-categoryBtn hover:text-white hover:bg-yellow duration-300 bg-filterBtn border border-categoryBorder rounded-2xl cursor-pointer"
+        <button
+          class="flex items-center py-[10px] font-medium px-[22px] gap-4 text-categoryBtn hover:text-white hover:bg-yellow duration-300 bg-filterBtn border border-categoryBorder rounded-2xl cursor-pointer"
         >
           <div class="text-[22px]">Смотреть всё</div>
-          <img src="~/assets/images/svg/right-arrow.svg" alt="" />
-        </btn>
+          <i-arrow-right size="11"></i-arrow-right>
+        </button>
       </div>
     </div>
     <div class="flex container gap-6 pt-11">
@@ -537,7 +531,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/beauty.png')})`,
         }"
-        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">
           Красота <br />
@@ -548,7 +542,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/washes.png')})`,
         }"
-        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-cover bg-center bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">
           Стирка <br />
@@ -559,7 +553,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/usefulTrifle.png')})`,
         }"
-        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">
           Полезные <br />
@@ -570,7 +564,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/appliances.png')})`,
         }"
-        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px]"
+        class="bg-contain bg-bottom bg-no-repeat w-[304px] h-[304px] pt-12 pl-10 border border-borders rounded-[58px] cursor-pointer"
       >
         <div class="text-3xl text-supermarket">
           Бытовая <br />
@@ -581,22 +575,26 @@
     <div class="pt-[200px] flex container justify-between items-center">
       <div class="flex gap-7 items-center">
         <div class="uppercase font-bold text-[32px]">Акции</div>
-        <btn
-          class="flex py-[10px] px-[22px] gap-4 text-categoryBtn hover:text-white hover:bg-yellow duration-300 bg-filterBtn border border-categoryBorder rounded-2xl cursor-pointer"
+        <button
+          class="flex items-center py-[10px] font-medium px-[22px] gap-4 text-categoryBtn hover:text-white hover:bg-yellow duration-300 bg-filterBtn border border-categoryBorder rounded-2xl cursor-pointer"
         >
           <div class="text-[22px]">Смотреть всё</div>
-          <img src="~/assets/images/svg/right-arrow.svg" alt="" />
-        </btn>
+          <i-arrow-right size="11"></i-arrow-right>
+        </button>
       </div>
       <div
         class="flex gap-2 bg-filterBtn border border-categoryBorder p-2 rounded-[58px]"
       >
-        <btn class="hover:bg-yellow px-2 py-2 rounded-full cursor-pointer">
-          <img src="~/assets/images/left-arrow.png" alt="" />
-        </btn>
-        <btn class="hover:bg-yellow px-2 py-2 rounded-full cursor-pointer">
-          <img src="~/assets/images/right-arrow.png" alt="" />
-        </btn>
+        <button class="hover:bg-yellow rounded-full cursor-pointer">
+          <div class="px-2 py-2 text-yellow hover:text-white">
+            <i-arrow-left size="11"></i-arrow-left>
+          </div>
+        </button>
+        <button class="hover:bg-yellow rounded-full cursor-pointer">
+          <div class="px-2 py-2 text-yellow hover:text-white">
+            <i-arrow-right size="11"></i-arrow-right>
+          </div>
+        </button>
       </div>
     </div>
     <div class="flex container gap-6 pt-11">
@@ -604,7 +602,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/preorder.png')})`,
         }"
-        class="bg-cover bg-center bg-no-repeat w-[310px] h-[449px] pt-9 px-9 border border-borders rounded-[30px]"
+        class="bg-cover bg-center bg-no-repeat w-[310px] h-[449px] pt-9 px-9 border border-borders rounded-[30px] cursor-pointer"
       >
         <div class="text-2xl font-bold text-supermarket">
           Сделай предзаказ в кулинарии <br />
@@ -615,7 +613,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/celeb.png')})`,
         }"
-        class="bg-cover bg-center bg-no-repeat w-[310px] h-[449px] pt-9 px-9 border border-borders rounded-[30px]"
+        class="bg-cover bg-center bg-no-repeat w-[310px] h-[449px] pt-9 px-9 border border-borders rounded-[30px] cursor-pointer"
       >
         <div class="text-2xl font-bold text-supermarket">
           Праздник <br />
@@ -626,7 +624,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/saleFor3.png')})`,
         }"
-        class="bg-cover bg-center bg-no-repeat w-[310px] h-[449px] pt-9 px-9 border border-borders rounded-[30px]"
+        class="bg-cover bg-center bg-no-repeat w-[310px] h-[449px] pt-9 px-9 border border-borders rounded-[30px] cursor-pointer"
       >
         <div class="text-2xl font-bold text-supermarket">
           Скидка на третий товар в корзине "Чистая линия"
@@ -636,7 +634,7 @@
         :style="{
           'background-image': `url(${require('~/assets/images/combo.png')})`,
         }"
-        class="bg-cover bg-center bg-no-repeat w-[310px] h-[449px] pt-9 px-9 border border-borders rounded-[30px]"
+        class="bg-cover bg-center bg-no-repeat w-[310px] h-[449px] pt-9 px-9 border border-borders rounded-[30px] cursor-pointer"
       >
         <div class="text-2xl font-bold text-supermarket">
           Комбо-набор <br />
@@ -709,11 +707,11 @@
           <div class="text-[22px]">на заказы клинарии</div>
         </div>
       </div>
-      <btn
+      <button
         class="font-semibold text-[22px] px-7 py-3 border border-white rounded-[30px] cursor-pointer"
       >
         Получить промокод
-      </btn>
+      </button>
     </div>
     <div
       :style="{
@@ -730,11 +728,11 @@
       </div>
       <div class="flex flex-col gap-[15px]">
         <div><img src="~/assets/images/stars.png" alt="" /></div>
-        <btn
+        <button
           class="text-red text-[22px] font-semibold py-3.5 px-9 border border-red rounded-[30px] cursor-pointer"
         >
           Оставить отзыв
-        </btn>
+        </button>
       </div>
     </div>
     <div class="bg-red mt-24">
@@ -816,30 +814,23 @@
 </template>
 
 <script>
-import SwiperClass, { Pagination } from 'swiper'
-import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
-import 'swiper/css'
-import 'swiper/css/pagination'
 import IGeolocation from '~/components/icons/i-geolocation.vue'
 import IFavorites from '~/components/icons/i-favorites.vue'
 import IProfile from '~/components/icons/i-profile.vue'
 import IBacket from '~/components/icons/i-backet.vue'
 import ISearch from '~/components/icons/i-search.vue'
+import IArrowRight from '~/components/icons/i-arrow-right.vue'
+import IArrowLeft from '~/components/icons/i-arrow-left.vue'
 export default {
   name: 'HomePage',
   components: {
-    Swiper,
-    SwiperSlide,
     IGeolocation,
     IFavorites,
     IProfile,
     IBacket,
     ISearch,
-  },
-  setup() {
-    return {
-      modules: [Pagination],
-    }
+    IArrowRight,
+    IArrowLeft,
   },
 }
 </script>
