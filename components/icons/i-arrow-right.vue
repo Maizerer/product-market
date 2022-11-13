@@ -1,5 +1,6 @@
 <template>
   <svg
+    :class="getDirection"
     :width="size"
     :height="size"
     viewBox="0 0 7 12"
@@ -24,10 +25,21 @@ export default {
       type: String,
       default: 'currentColor',
     },
+    direction: {
+      type: String,
+      default: 'right',
+    },
   },
   computed: {
     iconColor() {
       return this.$utils.getColor(this.color)
+    },
+    getDirection() {
+      return {
+        'rotate-180': this.direction === 'left',
+        'rotate-90': this.direction === 'bottom',
+        '-rotate-90': this.direction === 'top',
+      }
     },
   },
 }
