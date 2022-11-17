@@ -15,7 +15,7 @@
 </template>
 <script>
 export default {
-  name: 'IArrowRight',
+  name: 'IArrow',
   props: {
     size: {
       type: [Number, String],

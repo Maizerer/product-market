@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-col max-w-[304px] border border-borders rounded-[20px]">
+  <div
+    class="flex flex-col max-w-[304px] border border-borders rounded-[20px] overflow-hidden"
+  >
     <div>
       <img :src="item.image" alt="" />
     </div>
@@ -39,7 +41,7 @@ export default {
   props: {
     item: {
       type: Object,
-      required: false,
+      required: true,
     },
   },
 }
