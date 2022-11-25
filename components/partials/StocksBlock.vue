@@ -25,11 +25,13 @@
         </button>
       </div>
     </div>
-    <stock-item
-      v-for="(stock, index) in stocks"
-      :key="index"
-      :good="stock"
-    ></stock-item>
+    <div class="flex container">
+      <stock-item
+        v-for="(stock, index) in stocks"
+        :key="index"
+        :good="stock"
+      ></stock-item>
+    </div>
   </div>
 </template>
 
@@ -49,8 +51,8 @@ export default {
   },
   async created() {
     try {
-      const response = await this.$axios.get()(
-        'https://api.apisful.com/v1/collections/StocksItems/records/'
+      const response = await this.$axios.get(
+        'https://api.apisful.com/v1/collections/stocksitems/'
       )
       this.stocks = response.data.results
     } catch (e) {}
