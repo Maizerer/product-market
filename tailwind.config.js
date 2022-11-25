@@ -43,6 +43,13 @@ module.exports = {
       search: '#6B6B6B',
       filterBtn: '#FFF8EB',
       hoverFilterBtn: '#FFF8BC',
+      categoryBtn: '#DA9000',
+      categoryBorder: '#FFF7B9',
+      price: '#434343',
+      productBorder: '#DADADA',
+      supermarket: '#383C5C',
+      supermargetBg: '#F7FFE5',
+      freezeBg: '#D9D9D9',
     },
     extends: {
       backgroundImage: {

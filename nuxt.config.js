@@ -41,15 +41,25 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/toast',
   ],
-
+  toast: {
+    position: 'top-right',
+    duration: 3000,
+  },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    headers: {
+      common: {
+        'X-Api-Key': process.env.API_KEY,
+      },
+    },
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en',
+      lang: 'ru',
     },
   },
 
