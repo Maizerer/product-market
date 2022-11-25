@@ -108,11 +108,6 @@
       </div>
     </div>
 
-    <div class="flex container">
-      <div></div>
-      <div></div>
-    </div>
-
     <sales-block />
     <category-block
       v-for="(category, index) in categories"
@@ -303,6 +298,7 @@ import CategoryBlock from '~/components/partials/categoryBlock'
 import StocksBlock from '~/components/partials/StocksBlock.vue'
 export default {
   name: 'HomePage',
+
   components: {
     SalesBlock,
     IGeolocation,
@@ -313,18 +309,19 @@ export default {
     CategoryBlock,
     StocksBlock,
   },
+  async asyncData({ $axios }) {
+    try {
+      const response = await $axios.get(
+        'https://api.apisful.com/v1/collections/categories/?expand=subcategory&order_by=id'
+      )
+      const categories = response.data.results
+      return { categories }
+    } catch (e) {}
+  },
   data() {
     return {
       categories: [],
     }
-  },
-  async created() {
-    try {
-      const response = await this.$axios.get(
-        'https://api.apisful.com/v1/collections/categories/?expand=subcategory&order_by=id'
-      )
-      this.categories = response.data.results
-    } catch (e) {}
   },
 }
 </script>

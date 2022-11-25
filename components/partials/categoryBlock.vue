@@ -31,10 +31,6 @@ export default {
       type: Object,
       required: true,
     },
-    // color: {
-    //   type: String,
-    //   required: true,
-    // },
   },
 }
 </script>

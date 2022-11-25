@@ -46,7 +46,7 @@ export default {
       products: [],
     }
   },
-  async created() {
+  async fetch() {
     try {
       const response = await this.$axios.get(
         'https://api.apisful.com/v1/collections/products/'
