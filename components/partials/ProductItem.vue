@@ -25,11 +25,12 @@
             {{ item.saleprice }} Руб.
           </div>
         </div>
-        <div
+        <button
           class="text-red py-2.5 px-4 border border-red rounded-[60px] cursor-pointer hover:bg-red hover:text-white duration-300"
+          @click="addToCart"
         >
           В корзину
-        </div>
+        </button>
       </div>
     </div>
   </div>
@@ -42,6 +43,11 @@ export default {
     item: {
       type: Object,
       required: true,
+    },
+  },
+  methods: {
+    addToCart() {
+      this.$emit('addToCart', this.item)
     },
   },
 }

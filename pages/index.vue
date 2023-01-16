@@ -109,6 +109,7 @@
     </div>
 
     <sales-block />
+    <Cart v-if="cart.lenght" :cart-data="cart" />
     <category-block
       v-for="(category, index) in categories"
       :key="index"
@@ -288,6 +289,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import IGeolocation from '~/components/icons/i-geolocation.vue'
 import IFavorites from '~/components/icons/i-favorites.vue'
 import IProfile from '~/components/icons/i-profile.vue'
@@ -296,9 +298,9 @@ import ISearch from '~/components/icons/i-search.vue'
 import SalesBlock from '~/components/partials/SalesBlock'
 import CategoryBlock from '~/components/partials/categoryBlock'
 import StocksBlock from '~/components/partials/StocksBlock.vue'
+import Cart from '~/components/partials/Cart.vue'
 export default {
   name: 'HomePage',
-
   components: {
     SalesBlock,
     IGeolocation,
@@ -308,6 +310,7 @@ export default {
     ISearch,
     CategoryBlock,
     StocksBlock,
+    Cart,
   },
   async asyncData({ $axios }) {
     try {
@@ -322,6 +325,9 @@ export default {
     return {
       categories: [],
     }
+  },
+  computed: {
+    ...mapState('cart', ['cart']),
   },
 }
 </script>
