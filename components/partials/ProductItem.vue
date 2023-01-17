@@ -25,7 +25,24 @@
             {{ item.saleprice }} Руб.
           </div>
         </div>
+        <div
+          v-if="showCounter"
+          class="flex max-w-[110px] max-h-[42px] p-1.5 text-yellow gap-2.5 text-base border bg-filterBtn border-counterBorder rounded-[58px]"
+        >
+          <button
+            class="hover:bg-yellow hover:text-white rounded-full p-2.5 flex items-center"
+          >
+            <div>-</div>
+          </button>
+          <div class="font-bold flex items-center">{{ quantity }}</div>
+          <button
+            class="hover:bg-yellow hover:text-white rounded-full p-2.5 flex items-center"
+          >
+            <div>+</div>
+          </button>
+        </div>
         <button
+          v-else
           class="text-red py-2.5 px-4 border border-red rounded-[60px] cursor-pointer hover:bg-red hover:text-white duration-300"
           @click="addToCart"
         >
@@ -37,6 +54,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
   name: 'ProductItem',
   props: {
@@ -45,9 +64,21 @@ export default {
       required: true,
     },
   },
+  data() {
+    return {
+      quantity: 0,
+    }
+  },
+  computed: {
+    showCounter() {
+      return this.quantity >= 1
+    },
+  },
   methods: {
+    ...mapMutations('cart', ['addItem']),
     addToCart() {
-      this.$emit('addToCart', this.item)
+      this.addItem(this.item)
+      this.quantity = 1
     },
   },
 }

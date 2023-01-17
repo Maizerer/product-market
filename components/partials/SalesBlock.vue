@@ -30,7 +30,6 @@
         v-for="(product, index) in products"
         :key="index"
         :item="product"
-        @addToCart="addToCart"
       />
     </div>
     <div class="container"></div>
@@ -38,9 +37,10 @@
 </template>
 
 <script>
-import { mapMutations, mapState } from 'vuex'
+import { mapState } from 'vuex'
 import IArrow from '~/components/icons/i-arrow.vue'
 import ProductItem from '~/components/partials/ProductItem'
+
 export default {
   name: 'SalesBlock',
   components: { ProductItem, IArrow },
@@ -59,12 +59,6 @@ export default {
   },
   computed: {
     ...mapState('cart', ['cart']),
-  },
-  methods: {
-    ...mapMutations('cart', ['addItem']),
-    addToCart(data) {
-      this.addItem(data)
-    },
   },
 }
 </script>

@@ -3,7 +3,7 @@ export const state = () => ({
 })
 export const mutations = {
   addItem(state, item) {
-    state.cart.push(item)
+    state.cart.push({ ...item, quantity: 1 })
   },
   removeProduct(state, item) {
     state.cart = state.cart.filter((product) => {
@@ -15,7 +15,7 @@ export const mutations = {
       return payload.item.id === product.id
     })
     if (itemIndex !== -1) {
-      state.cart[itemIndex].count = payload.count
+      state.cart[itemIndex].quantity = payload.quantity
     }
   },
 }
