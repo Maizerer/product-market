@@ -109,7 +109,7 @@
     </div>
 
     <sales-block />
-    <Cart v-if="cart.lenght" :cart-data="cart" />
+    <Cart v-if="cart.length" :cart-data="cart" />
     <category-block
       v-for="(category, index) in categories"
       :key="index"

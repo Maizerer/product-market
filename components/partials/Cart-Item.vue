@@ -6,29 +6,35 @@
         <div>В наличии {{ cartItemData.count }} шт</div>
         <div>{{ cartItemData.price }} Руб</div>
       </div>
+      <div>
+        <div>Добавлено: {{ cartItemData.quantity }}</div>
+      </div>
       <div class="font-semibold text-xl leading-none my-[7px] h-[82px]">
         {{ cartItemData.title }}, {{ cartItemData.weight }}
       </div>
     </div>
-    <button>Удалить</button>
+    <button @click="removeProduct(cartItemData)">Удалить</button>
   </div>
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
   name: 'CartItem',
   props: {
     cartItemData: {
       type: Object,
-      default() {
-        return {}
-      },
+      required: true,
     },
   },
   data() {
     return {}
   },
   computed: {},
+  methods: {
+    ...mapMutations('cart', ['removeProduct']),
+  },
 }
 </script>
 <style scoped>

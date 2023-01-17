@@ -10,6 +10,7 @@
 </template>
 <script>
 import CartItem from '~/components/partials/Cart-Item.vue'
+
 export default {
   name: 'Cart',
   components: {
@@ -23,10 +24,6 @@ export default {
       },
     },
   },
-  data() {
-    return {}
-  },
-  computed: {},
 }
 </script>
 <style scoped></style>
