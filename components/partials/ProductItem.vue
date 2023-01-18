@@ -44,7 +44,7 @@
           </button>
         </div>
         <button
-          v-else
+          v-else-if="showBucket"
           class="text-red py-2.5 px-4 border border-red rounded-[60px] cursor-pointer hover:bg-red hover:text-white duration-300"
           @click="addToCart"
         >
@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapMutations, mapState } from 'vuex'
 
 export default {
   name: 'ProductItem',
@@ -72,8 +72,12 @@ export default {
     }
   },
   computed: {
+    ...mapState('cart', ['cart']),
     showCounter() {
       return this.quantity >= 1
+    },
+    showBucket() {
+      return this.quantity < 1
     },
   },
   methods: {

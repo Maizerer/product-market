@@ -9,6 +9,7 @@ export const mutations = {
     state.cart = state.cart.filter((product) => {
       return item.id !== product.id
     })
+    item.quantity = 0
   },
   setCount(state, payload) {
     const itemIndex = state.cart.findIndex((product) => {

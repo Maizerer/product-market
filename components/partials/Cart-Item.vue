@@ -4,7 +4,9 @@
     <div>
       <div class="flex justify-between text-sm leading-none text-price">
         <div>В наличии {{ cartItemData.count }} шт</div>
-        <div>{{ cartItemData.price }} Руб</div>
+        <div>
+          {{ (cartItemData.price * cartItemData.quantity).toFixed(2) }} Руб
+        </div>
       </div>
       <div>
         <div>Добавлено: {{ cartItemData.quantity }}</div>
@@ -13,7 +15,7 @@
         {{ cartItemData.title }}, {{ cartItemData.weight }}
       </div>
     </div>
-    <button @click="removeProduct(cartItemData)">Удалить</button>
+    <button @click="deleting">Удалить</button>
   </div>
 </template>
 
@@ -34,6 +36,9 @@ export default {
   computed: {},
   methods: {
     ...mapMutations('cart', ['removeProduct']),
+    deleting() {
+      this.removeProduct(this.cartItemData)
+    },
   },
 }
 </script>
