@@ -31,12 +31,14 @@
         >
           <button
             class="hover:bg-yellow hover:text-white rounded-full p-2.5 flex items-center"
+            @click="decrementQuantity"
           >
             <div>-</div>
           </button>
           <div class="font-bold flex items-center">{{ quantity }}</div>
           <button
             class="hover:bg-yellow hover:text-white rounded-full p-2.5 flex items-center"
+            @click="incrementQuantity"
           >
             <div>+</div>
           </button>
@@ -75,10 +77,24 @@ export default {
     },
   },
   methods: {
-    ...mapMutations('cart', ['addItem']),
+    ...mapMutations('cart', ['addItem', 'setCount']),
     addToCart() {
       this.addItem(this.item)
       this.quantity = 1
+    },
+    incrementQuantity() {
+      this.quantity += 1
+      this.setCount({
+        item: this.item,
+        quantity: this.quantity,
+      })
+    },
+    decrementQuantity() {
+      this.quantity -= 1
+      this.setCount({
+        item: this.item,
+        quantity: this.quantity,
+      })
     },
   },
 }

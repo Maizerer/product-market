@@ -16,6 +16,9 @@ export const mutations = {
     })
     if (itemIndex !== -1) {
       state.cart[itemIndex].quantity = payload.quantity
+      if (payload.quantity === 0) {
+        state.cart.splice(itemIndex, 1)
+      }
     }
   },
 }
