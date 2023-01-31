@@ -58,14 +58,15 @@
         >
           <i-profile size="22"></i-profile>
         </button>
-        <button
+        <nuxt-link
           class="flex bg-red rounded-2xl gap-[13px] pr-[11px] py-[11px] pl-[17px] items-center"
+          to="/CartPage"
         >
           <i-backet size="24" color="white"></i-backet>
           <span class="text-white text-base leading-none font-bold mx-0 my-auto"
             >Корзина</span
           >
-        </button>
+        </nuxt-link>
       </div>
     </div>
 
@@ -109,7 +110,7 @@
     </div>
 
     <sales-block />
-    <Cart v-if="cart.length" :cart-data="cart" />
+
     <category-block
       v-for="(category, index) in categories"
       :key="index"
@@ -298,7 +299,6 @@ import ISearch from '~/components/icons/i-search.vue'
 import SalesBlock from '~/components/partials/SalesBlock'
 import CategoryBlock from '~/components/partials/categoryBlock'
 import StocksBlock from '~/components/partials/StocksBlock.vue'
-import Cart from '~/components/partials/Cart.vue'
 export default {
   name: 'HomePage',
   components: {
@@ -310,7 +310,6 @@ export default {
     ISearch,
     CategoryBlock,
     StocksBlock,
-    Cart,
   },
   async asyncData({ $axios }) {
     try {

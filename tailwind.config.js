@@ -28,6 +28,7 @@ module.exports = {
       black: '#000000',
       red: {
         DEFAULT: '#FF0000',
+        dark: '#CF0000',
       },
       yellow: {
         DEFAULT: '#FFA900',
@@ -51,6 +52,7 @@ module.exports = {
       supermargetBg: '#F7FFE5',
       freezeBg: '#D9D9D9',
       counterBorder: '#FFF7B9',
+      orderInfoBg: '#FFECCA',
     },
     extends: {
       backgroundImage: {
