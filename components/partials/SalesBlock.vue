@@ -32,12 +32,15 @@
         :item="product"
       />
     </div>
+    <div class="container"></div>
   </section>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import IArrow from '~/components/icons/i-arrow.vue'
 import ProductItem from '~/components/partials/ProductItem'
+
 export default {
   name: 'SalesBlock',
   components: { ProductItem, IArrow },
@@ -53,6 +56,9 @@ export default {
       )
       this.products = response.data.results
     } catch (e) {}
+  },
+  computed: {
+    ...mapState('cart', ['cart']),
   },
 }
 </script>
