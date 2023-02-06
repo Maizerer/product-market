@@ -32,7 +32,9 @@
         >
           <div>-</div>
         </button>
-        <div class="font-bold flex items-center">{{ quantity }}</div>
+        <div class="font-bold flex items-center">
+          {{ cartItemData.quantity }}
+        </div>
         <button
           class="hover:bg-yellow hover:text-white rounded-full p-2.5 flex items-center"
           @click="incrementQuantity"
@@ -71,33 +73,18 @@ export default {
       required: true,
     },
   },
-  data() {
-    return {
-      quantity: 0,
-    }
-  },
-  computed: {},
   methods: {
     ...mapMutations('cart', ['removeProduct', 'addItem', 'setCount']),
-    deleting() {
-      this.removeProduct(this.cartItemData)
-    },
-    addToCart() {
-      this.addItem(this.item)
-      this.quantity = 1
-    },
     incrementQuantity() {
-      this.quantity += 1
       this.setCount({
-        item: this.item,
-        quantity: this.quantity,
+        item: this.cartItemData,
+        quantity: this.cartItemData.quantity + 1,
       })
     },
     decrementQuantity() {
-      this.quantity -= 1
       this.setCount({
-        item: this.item,
-        quantity: this.quantity,
+        item: this.cartItemData,
+        quantity: this.cartItemData.quantity - 1,
       })
     },
   },

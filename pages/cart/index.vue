@@ -1,18 +1,16 @@
 <template>
   <div>
-    <Cart v-if="cart.length" :cart-data="cart" />
+    <Cart />
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
 import Cart from '~/components/partials/Cart.vue'
+
 export default {
+  name: 'CartPage',
   components: {
     Cart,
-  },
-  computed: {
-    ...mapState('cart', ['cart']),
   },
 }
 </script>

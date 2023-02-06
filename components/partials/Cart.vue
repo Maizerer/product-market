@@ -6,14 +6,34 @@
           <div class="font-bold text-[32px] leading-none uppercase">
             Корзина
           </div>
-          <button class="text-sm leading-none text-textlight">Очистить</button>
+          <button
+            class="text-sm leading-none text-textlight"
+            @click="clearCart"
+          >
+            Очистить
+          </button>
         </div>
         <div class="w-[853px] mt-[38px]">
-          <CartItem
-            v-for="(item, index) in cartData"
-            :key="index"
-            :cart-item-data="item"
-          />
+          <template v-if="cart.length">
+            <CartItem
+              v-for="(item, index) in cart"
+              :key="index"
+              :cart-item-data="item"
+            />
+          </template>
+          <div
+            v-else
+            class="bg-green-light text-red rounded-2xl h-[500px] font-bold flex justify-center items-center text-2xl flex-col"
+          >
+            <div>Корзина пустая</div>
+            <nuxt-link to="/">
+              <button
+                class="text-white bg-red border border-red rounded-[31px] py-[13px] px-[88px] font-semibold text-[22px] mt-6 text-center"
+              >
+                Добавить товары
+              </button>
+            </nuxt-link>
+          </div>
         </div>
       </div>
       <div
@@ -55,7 +75,7 @@
         </div>
         <div class="flex flex-col gap-[14px] mt-8 text-xl leading-none">
           <div class="flex justify-between">
-            <div>Товары (5)</div>
+            <div>Товары ({{ productsCount }})</div>
             <div>2.443 кг</div>
           </div>
           <div class="flex justify-between">
@@ -90,6 +110,7 @@
   </div>
 </template>
 <script>
+import { mapState, mapGetters, mapMutations } from 'vuex'
 import CartItem from '~/components/partials/Cart-Item.vue'
 
 export default {
@@ -97,12 +118,14 @@ export default {
   components: {
     CartItem,
   },
-  props: {
-    cartData: {
-      type: Array,
-      default() {
-        return []
-      },
+  computed: {
+    ...mapState('cart', ['cart']),
+    ...mapGetters('cart', ['productsCount']),
+  },
+  methods: {
+    ...mapMutations('cart', ['setCart']),
+    clearCart() {
+      this.setCart([])
     },
   },
 }

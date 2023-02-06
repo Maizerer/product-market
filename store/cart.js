@@ -22,6 +22,17 @@ export const mutations = {
       }
     }
   },
+  setCart(state, payload) {
+    state.cart = payload
+  },
 }
 export const actions = {}
-export const getters = {}
+export const getters = {
+  productsCount(state) {
+    let count = 0
+    state.cart.forEach((product) => {
+      count += product.quantity
+    })
+    return count
+  },
+}
