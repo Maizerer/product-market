@@ -22,9 +22,7 @@ export default {
     {
       src: '~plugins/servicePlugins/utils.js',
     },
-    {
-      src: '~plugins/persisted-state.js',
-    },
+
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
